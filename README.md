@@ -2,7 +2,7 @@
 
 > 
 
-[![NPM](https://img.shields.io/npm/v/@neuroid/react-sidenav.svg)](https://www.npmjs.com/package/react-sidenav) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@neuroid/react-sidenav.svg)](https://www.npmjs.com/package/@neuroid/react-sidenav) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
@@ -15,12 +15,12 @@ npm install --save react-sidenav
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-sidenav'
+import ReactSidebar from "@neuroid/react-sidenav";
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <ReactSidebar navbarHeight={48} position="LEFT" />
     )
   }
 }
