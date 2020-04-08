@@ -1,8 +1,34 @@
 /* add css styles here (optional) */
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+.sidebar {
+  position: fixed;
+  z-index: 100;
+  padding: 48px 0 0;
+}
+
+.sidebarSticky {
+  top: 0;
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.sideNavLeft {
+  left: 0;
+  bottom: 0;
+  top: 0;
+  -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.75);
+}
+
+.sideNavRight {
+  right: 0;
+  bottom: 0;
+  top: 0;
+  -webkit-box-shadow: -5px 0px 5px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 0px 5px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 0px 5px -4px rgba(0, 0, 0, 0.75);
 }

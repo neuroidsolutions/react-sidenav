@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
-
-import ExampleComponent from 'react-sidenav'
+import React, { Component } from "react";
+import ReactSidebar from "react-sidenav";
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <ReactSidebar navbarHeight={48} position="LEFT" />
       </div>
-    )
+    );
   }
 }

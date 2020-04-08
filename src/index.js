@@ -1,22 +1,41 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
 import styles from './styles.css'
 
-export default class ExampleComponent extends Component {
+class ReactSidebar extends Component {
   static propTypes = {
-    text: PropTypes.string
-  }
+    width: PropTypes.number,
+    background: PropTypes.string,
+    navbarHeight: PropTypes.number,
+    children: PropTypes.node,
+    position: PropTypes.oneOf(['LEFT', 'RIGHT'])
+  };
 
   render() {
-    const {
-      text
-    } = this.props
-
+    const { background, children, navbarHeight, position, width } = this.props
+    const positionStyle =
+      position === 'LEFT' ? styles.sideNavLeft : styles.sideNavRight
+    const containerStyle = [styles.sidebar, positionStyle].join(' ')
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+      <nav
+        className={containerStyle}
+        style={{ width: width, background, padding: `${navbarHeight}px 0 0` }}
+      >
+        <div
+          className={styles.sidebarSticky}
+          style={{ height: `calc( 100vh - ${navbarHeight}px )` }}
+        >
+          {children}
+        </div>
+      </nav>
     )
   }
 }
+
+ReactSidebar.defaultProps = {
+  width: 200,
+  background: '#fff',
+  navbarHeight: 0,
+  position: 'LEFT'
+}
+export default ReactSidebar
